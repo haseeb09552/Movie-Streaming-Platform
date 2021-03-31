@@ -1,16 +1,70 @@
-<div class="flex flex-row flex-wrap w-full py-6">
-  <!-- <div class="flex flex-col hidden w-full h-full md:w-2/6"></div> -->
-  <div class="flex flex-col w-full h-full bg-gray-200">
-    <h1 class="px-8 pt-4 text-6xl font-black">Movies</h1>
-    <div class="flex flex-row w-screen" *ngFor="let movie of movies">
+<h1 class="pt-4 mb-6 ml-16 text-6xl font-black">Movies</h1>
+<div class="flex flex-row w-full pl-12 pr-28">
+  <div class="flex flex-row flex-wrap justify-start w-3/4 h-full">
+    <div *ngFor="let movie of movies">
       <app-movie-card
         [name]="movie.name"
         [url]="movie.imageUrl"
         [release]="movie.release"
         [time]="movie.time"
         [category]="movie.category"
+        [id]="movie.id"
       >
       </app-movie-card>
     </div>
+  </div>
+  <div class="flex flex-col w-1/4">
+    <form class="flex flex-col w-full h-full space-y-4">
+      <h1 class="text-4xl font-black text-black">Edit Details</h1>
+      <div class="flex flex-col space-y-2">
+        <label for="email" class="ml-2 text-sm font-semibold text-gray-600"
+          >Email</label
+        >
+        <input
+          placeholder="name@domain.com"
+          type="email"
+          name="email"
+          class="h-12 px-2 border-2 rounded-lg w-96 focus:outline-none focus:border-blue-400"
+        />
+      </div>
+      <div class="flex flex-col space-y-2">
+        <label for="email" class="ml-2 text-sm font-semibold text-gray-600"
+          >Email</label
+        >
+        <input
+          placeholder="name@domain.com"
+          type="email"
+          name="email"
+          class="h-12 px-2 border-2 rounded-lg w-96 focus:outline-none focus:border-blue-400"
+        />
+      </div>
+      <div class="flex flex-col space-y-2">
+        <label for="email" class="ml-2 text-sm font-semibold text-gray-600"
+          >Email</label
+        >
+        <input
+          placeholder="name@domain.com"
+          type="email"
+          name="email"
+          class="h-12 px-2 border-2 rounded-lg w-96 focus:outline-none focus:border-blue-400"
+        />
+      </div>
+      <div class="flex flex-col space-y-2">
+        <label for="email" class="ml-2 text-sm font-semibold text-gray-600"
+          >Email</label
+        >
+        <input
+          placeholder="name@domain.com"
+          type="email"
+          name="email"
+          class="h-12 px-2 border-2 rounded-lg w-96 focus:outline-none focus:border-blue-400"
+        />
+      </div>
+      <button
+        class="w-56 h-12 font-semibold text-white bg-blue-500 rounded-lg hover:bg-blue-600"
+      >
+        Update
+      </button>
+    </form>
   </div>
 </div>

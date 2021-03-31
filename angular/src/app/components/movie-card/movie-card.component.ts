@@ -11,6 +11,7 @@ export class MovieCardComponent implements OnInit {
   @Input() category: any;
   @Input() release: any;
   @Input() time: any;
+  @Input() id: any;
 
   constructor() {}
 
