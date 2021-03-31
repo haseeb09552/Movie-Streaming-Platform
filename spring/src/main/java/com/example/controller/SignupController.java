@@ -1,6 +1,6 @@
-package com.example.demo.controller;
-import com.example.demo.dao.UserRepository;
-import com.example.demo.model.UserModel;
+package com.example.controller;
+import com.example.dao.UserModelDao;
+import com.example.entities.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
