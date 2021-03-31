@@ -8,6 +8,7 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { MovieEditComponent } from './admin/movie-edit/movie-edit.component';
 import { UsersComponent } from './admin/users/users.component';
 import { AdminComponent } from './admin/admin/admin.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -16,6 +17,7 @@ const routes: Routes = [
   {
     path: 'movies',
     component: HomeComponent,
+    canActivate: [AuthGuard],
     children: [
       {
         path: '',

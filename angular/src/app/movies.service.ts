@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class MoviesService {
-  private _moviesUrl = 'http://localhost:8081/api/events';
+  private _moviesUrl = 'http://localhost:8080/movie';
 
   constructor(private http: HttpClient) {}
 

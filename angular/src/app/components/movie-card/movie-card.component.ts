@@ -6,7 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./movie-card.component.css'],
 })
 export class MovieCardComponent implements OnInit {
-  @Input() movie: any;
+  @Input() name: any;
+  @Input() url: any;
+  @Input() category: any;
+  @Input() release: any;
+  @Input() time: any;
 
   constructor() {}
 

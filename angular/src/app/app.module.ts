@@ -19,6 +19,7 @@ import { MovieEditComponent } from './admin/movie-edit/movie-edit.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { UsersComponent } from './admin/users/users.component';
 import { AdminComponent } from './admin/admin/admin.component';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { AdminComponent } from './admin/admin/admin.component';
     AdminComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
-  providers: [AuthService, MoviesService],
+  providers: [AuthService, MoviesService, AuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

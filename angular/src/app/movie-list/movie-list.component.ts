@@ -12,7 +12,10 @@ export class MovieListComponent implements OnInit {
 
   ngOnInit(): void {
     this._moviesService.getMovies().subscribe(
-      (res) => (this.movies = res),
+      (res) => {
+        this.movies = res;
+        console.log(res);
+      },
       (err) => console.log(err)
     );
   }
