@@ -14,6 +14,11 @@ import { EditMovieDetailComponent } from './components/edit-movie-detail/edit-mo
 import { HomeComponent } from './home/home.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { AuthService } from './auth.service';
+import { MoviesService } from './movies.service';
+import { MovieEditComponent } from './admin/movie-edit/movie-edit.component';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import { UsersComponent } from './admin/users/users.component';
+import { AdminComponent } from './admin/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +31,13 @@ import { AuthService } from './auth.service';
     EditMovieDetailComponent,
     HomeComponent,
     MovieListComponent,
+    MovieEditComponent,
+    MovieDetailComponent,
+    UsersComponent,
+    AdminComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
-  providers: [AuthService],
+  providers: [AuthService, MoviesService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

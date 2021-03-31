@@ -4,6 +4,10 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import { MovieEditComponent } from './admin/movie-edit/movie-edit.component';
+import { UsersComponent } from './admin/users/users.component';
+import { AdminComponent } from './admin/admin/admin.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -16,6 +20,24 @@ const routes: Routes = [
       {
         path: '',
         component: MovieListComponent,
+      },
+      {
+        path: ':id',
+        component: MovieDetailComponent,
+      },
+    ],
+  },
+  {
+    path: 'admin',
+    component: AdminComponent,
+    children: [
+      {
+        path: 'movies',
+        component: MovieEditComponent,
+      },
+      {
+        path: 'users',
+        component: UsersComponent,
       },
     ],
   },
