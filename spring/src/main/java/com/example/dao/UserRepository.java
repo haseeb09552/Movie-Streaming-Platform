@@ -1,10 +1,10 @@
-package com.example.demo.Repository;
+package com.example.dao;
 
-import com.example.demo.model.*;
+import com.example.entities.*;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<com.example.demo.model.UserModel, Integer> {
+public interface UserRepository extends JpaRepository<com.example.entities.UserModel, Integer> {
 
     public UserModel findByEmail(String email);
 
