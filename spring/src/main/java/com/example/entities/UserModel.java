@@ -1,44 +1,63 @@
 package com.example.entities;
 
 import javax.persistence.Entity;
-import javax.persistence.*;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-@Table(name="user")
+@Table
 public class UserModel {
-
-	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Integer id;
+
 	private String email;
-	@Column
-	private String password;
-	@Column
-	private String username;
-	@Column
-	private String mobileNumber;
-	@Column
-	private Boolean active;
-	@Column
-	private String role;
+    private String username;
+    private String password;
+    private String mobileNumber;
+    private Boolean active;
+    private String role;
+
+	public UserModel() {
+
+	}
+
+	public UserModel(Integer id, String email, String username, String password, String mobileNumber, Boolean active,
+			String role) {
+		this.id = id;
+		this.email = email;
+		this.username = username;
+		this.password = password;
+		this.mobileNumber = mobileNumber;
+		this.active = active;
+		this.role = role;
+	}
 	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
 	public String getUsername() {
 		return username;
 	}
 	public void setUsername(String username) {
 		this.username = username;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public String getMobileNumber() {
 		return mobileNumber;
@@ -58,5 +77,11 @@ public class UserModel {
 	public void setRole(String role) {
 		this.role = role;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "UserModel [active=" + active + ", email=" + email + ", id=" + id + ", mobileNumber=" + mobileNumber
+				+ ", password=" + password + ", role=" + role + ", username=" + username + "]";
+	}
+
 }
