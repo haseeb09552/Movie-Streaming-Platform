@@ -1,7 +1,7 @@
-package com.example.demo.controller;
+package com.example.controller;
 
-import com.example.demo.model.*;
-import com.example.demo.Service.*;
+import com.example.entities.*;
+import com.example.Service.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
