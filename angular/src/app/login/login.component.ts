@@ -17,11 +17,17 @@ export class LoginComponent implements OnInit {
 
   loginUser() {
     this._auth.loginUser(this.loginUserData).subscribe(
-      (res) => {
+      (res: any) => {
+        if (res === 'admin') {
+          console.log('Admin');
+
+          localStorage.setItem('admin', 'true');
+          this._router.navigate(['/admin/movies']);
+        }
         localStorage.setItem('loggedIn', 'true');
         this._router.navigate(['/movies']);
       },
-      (err) => (this.error = err)
+      (err: any) => (this.error = err)
     );
   }
 }

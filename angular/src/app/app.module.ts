@@ -1,3 +1,4 @@
+import { AuthAdminGuard } from './auth-admin.guard';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -38,7 +39,7 @@ import { AuthGuard } from './auth.guard';
     AdminComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
-  providers: [AuthService, MoviesService, AuthGuard],
+  providers: [AuthService, MoviesService, AuthGuard, AuthAdminGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

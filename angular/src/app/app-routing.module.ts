@@ -1,3 +1,4 @@
+import { AuthAdminGuard } from './auth-admin.guard';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
@@ -32,6 +33,7 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
+    canActivate: [AuthAdminGuard],
     children: [
       {
         path: 'movies',

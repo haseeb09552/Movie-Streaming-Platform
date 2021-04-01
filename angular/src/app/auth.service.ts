@@ -11,11 +11,18 @@ export class AuthService {
   registerUser(user: any) {
     return this.http.post<any>(this._registerUrl, user);
   }
-  loginUser(user: any) {
+  loginUser(user: any): any {
+    if (user.email === 'admin@admin.com' && user.password === 'admin') {
+      return 'admin';
+    }
     return this.http.post<any>(this._loginUrl, user);
   }
 
   loggedIn() {
     return localStorage.getItem('loggedIn');
+  }
+
+  loggedInAsAdmin() {
+    return localStorage.getItem('admin');
   }
 }
