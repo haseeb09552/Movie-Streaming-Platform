@@ -9,6 +9,7 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit {
   loginUserData: any = {};
+  error: any = {};
 
   constructor(private _auth: AuthService, private _router: Router) {}
 
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('loggedIn', 'true');
         this._router.navigate(['/movies']);
       },
-      (err) => console.log(err)
+      (err) => (this.error = err)
     );
   }
 }

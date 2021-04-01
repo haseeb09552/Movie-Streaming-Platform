@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
   registerUserData: any = {};
+  error: any = {};
   constructor(private _auth: AuthService, private _router: Router) {}
 
   ngOnInit(): void {}
@@ -19,7 +20,7 @@ export class RegisterComponent implements OnInit {
         localStorage.setItem('loggedIn', 'true');
         this._router.navigate(['/movies']);
       },
-      (err) => console.log(err)
+      (err) => (this.error = err)
     );
   }
 }
