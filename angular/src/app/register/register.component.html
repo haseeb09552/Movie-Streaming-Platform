@@ -23,7 +23,6 @@
           name="name"
           class="h-12 px-2 border-2 rounded-lg w-96 focus:outline-none focus:border-blue-400"
         />
-        <small class="text-red-500">{{ error.name }}</small>
       </div>
       <div class="flex flex-col space-y-1">
         <label for="email" class="ml-2 text-sm font-semibold text-gray-600"
@@ -36,7 +35,6 @@
           name="email"
           class="h-12 px-2 border-2 rounded-lg w-96 focus:outline-none focus:border-blue-400"
         />
-        <small class="text-red-500">{{ error.email }}</small>
       </div>
       <div class="flex flex-col space-y-1">
         <label for="mbno" class="ml-2 text-sm font-semibold text-gray-600"
@@ -49,7 +47,6 @@
           name="mbno"
           class="h-12 px-2 border-2 rounded-lg w-96 focus:outline-none focus:border-blue-400"
         />
-        <small class="text-red-500">{{ error.mbno }}</small>
       </div>
       <div class="flex flex-col space-y-1">
         <label for="password" class="ml-2 text-sm font-semibold text-gray-600"
@@ -62,7 +59,6 @@
           name="password"
           class="h-12 px-2 border-2 rounded-lg w-96 focus:outline-none focus:border-blue-400"
         />
-        <small class="text-red-500">{{ error.password }}</small>
       </div>
       <button
         (click)="registerUser()"
